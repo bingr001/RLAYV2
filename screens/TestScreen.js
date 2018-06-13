@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return { 
+  return {
     setFavoriteAnimal: (text) => { dispatch(setFavoriteAnimal(text)) },
     watchPersonData: () => { dispatch(watchPersonData()) },
   };
@@ -61,7 +61,7 @@ class TestScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TestScreen);
