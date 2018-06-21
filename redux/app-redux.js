@@ -12,7 +12,7 @@ const initialState = {
     personData: { },
     //+ testing for devo page
 
-    favoriteAnimal1: "cat",
+    answer1: "cat",
 };
 
 
@@ -25,8 +25,8 @@ const reducer = (state = initialState, action) => {
         case "setFavoriteAnimal":
             return { ...state, favoriteAnimal: action.value };
 //+ added just below here
-        case "setFavoriteAnimal1":
-            return { ...state, favoriteAnimal1: action.value};
+        case "setanswer1":
+            return { ...state, answer1: action.value};
 
         case "setPersonData":
             return { ...state, personData: action.value };
@@ -55,10 +55,10 @@ const setFavoriteAnimal = (favoriteAnimal) => {
 }
 
 //+ added below one too
-const setFavoriteAnimal1 = (favoriteAnimal1) => {
+const setanswer1 = (answer1) => {
     return {
-        type: "setFavoriteAnimal1",
-        value: favoriteAnimal1,
+        type: "setanswer1",
+        value: answer1,
     };
 }
 
@@ -78,4 +78,4 @@ const watchPersonData = () => {
     };
 }
 
-export { setFavoriteAnimal, setFavoriteAnimal1, setPersonData, watchPersonData };
+export { setFavoriteAnimal, setanswer1, setPersonData, watchPersonData };

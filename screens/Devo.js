@@ -3,18 +3,18 @@ import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, 
 import { TestComponent } from './../components/AppComponents';
 import * as firebase from 'firebase';
 import { connect } from 'react-redux';
-import { setFavoriteAnimal1, watchPersonData } from './../redux/app-redux';
+import { setanswer1, watchPersonData } from './../redux/app-redux';
 
 const mapStateToProps1 = (state) => {
   return {
-    favoriteAnimal1: state.favoriteAnimal1,
+    answer1: state.answer1,
     personData: state.personData,
   };
 }
 
 const mapDispatchToProps1 = (dispatch) => {
   return {
-    setFavoriteAnimal1: (text) => { dispatch(setFavoriteAnimal1(text)) },
+    setanswer1: (text) => { dispatch(setanswer1(text)) },
     watchPersonData: () => { dispatch(watchPersonData()) },
   };
 }
@@ -27,7 +27,7 @@ class Devo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      favoriteAnimal1: this.props.favoriteAnimal1,
+      answer1: this.props.answer1,
     }
 
     this.props.watchPersonData();
@@ -38,18 +38,18 @@ class Devo extends React.Component {
   }
 
   onSetFavoriteAnimalPress1 = () => {
-    this.props.setFavoriteAnimal1(this.state.favoriteAnimal1);
+    this.props.setanswer1(this.state.answer1);
   }
 
 
   render() {
     return (
       <View style={{paddingTop:20}}>
-        <Text>{this.props.favoriteAnimal1}</Text>
+        <Text>{this.props.answer1}</Text>
 
         <TextInput style={{borderWidth:1, width: 200, height: 40}}
-          value={this.state.favoriteAnimal1}
-          onChangeText={(text) => { this.setState({favoriteAnimal1: text}) }}
+          value={this.state.answer1}
+          onChangeText={(text) => { this.setState({answer1: text}) }}
         />
         <Button title="Please Work" onPress={this.onSetFavoriteAnimalPress1} />
 
