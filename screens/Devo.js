@@ -3,7 +3,7 @@ import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, 
 import { TestComponent } from './../components/AppComponents';
 import * as firebase from 'firebase';
 import { connect } from 'react-redux';
-import { setFavoriteAnimal1, watchPersonData } from './../redux/app-redux2';
+import { setFavoriteAnimal1, watchPersonData } from './../redux/app-redux';
 
 const mapStateToProps1 = (state) => {
   return {
