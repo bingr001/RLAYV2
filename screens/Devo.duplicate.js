@@ -1,20 +1,18 @@
-import React from 'react';
-import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput, Button } from 'react-native';
-import { TestComponent } from './../components/AppComponents';
-import * as firebase from 'firebase';
+import React, { Component } from 'react';
+import { AppRegistry, ScrollView, StyleSheet, Image, View, Text, TextInput, Button, Alert } from 'react-native';
 import { connect } from 'react-redux';
-import { setanswer1, watchPersonData } from './../redux/app-redux';
+import { setFavoriteAnimal1, watchPersonData } from './../redux/app-redux2';
 
-const mapStateToProps1 = (state) => {
+const mapStateToProps = (state) => {
   return {
-    answer1: state.answer1,
+    favoriteAnimal1: state.favoriteAnimal1,
     personData: state.personData,
   };
 }
 
 const mapDispatchToProps1 = (dispatch) => {
   return {
-    setanswer1: (text) => { dispatch(setanswer1(text)) },
+    setFavoriteAnimal1: (text) => { dispatch(setFavoriteAnimal1(text)) },
     watchPersonData: () => { dispatch(watchPersonData()) },
   };
 }
@@ -27,7 +25,7 @@ class Devo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      answer1: this.props.answer1,
+      favoriteAnimal1: this.props.favoriteAnimal1,
     }
 
     this.props.watchPersonData();
@@ -38,20 +36,20 @@ class Devo extends React.Component {
   }
 
   onSetFavoriteAnimalPress1 = () => {
-    this.props.setanswer1(this.state.answer1);
+    this.props.setFavoriteAnimal1(this.state.favoriteAnimal1);
   }
 
 
   render() {
     return (
       <View style={{paddingTop:20}}>
-        <Text>{this.props.answer1}</Text>
+        <Text>{this.props.favoriteAnimal1}</Text>
 
         <TextInput style={{borderWidth:1, width: 200, height: 40}}
-          value={this.state.answer1}
-          onChangeText={(text) => { this.setState({answer1: text}) }}
+          value={this.state.favoriteAnimal1}
+          onChangeText={(text) => { this.setState({favoriteAnimal1: text}) }}
         />
-        <Button title="Please Work" onPress={this.onSetFavoriteAnimalPress1} />
+        <Button title="Set Favorite Animal" onPress={this.onSetFavoriteAnimalPress1} />
 
         <Text>{this.props.personData.firstName}</Text>
         <Text>{this.props.personData.lastName}</Text>
@@ -64,7 +62,7 @@ const styles = StyleSheet.create({
 
 });
 
-export default connect(mapStateToProps1, mapDispatchToProps1)(Devo);
+export default connect(mapStateToProps, mapDispatchToProps1)(Devo);
 
 /*export default class ScrollingView extends Component {
   render() {

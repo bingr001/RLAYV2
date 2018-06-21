@@ -7,26 +7,19 @@ import * as firebase from 'firebase';
 // Initial State...
 //
 
-const initialState = {
-    favoriteAnimal: "duck",
+const initialState1 = {
+    favoriteAnimal1: "cat",
     personData: { },
-    //+ testing for devo page
-
-    answer1: "cat",
 };
-
 
 //
 // Reducer...
 //
 
-const reducer = (state = initialState, action) => {
+const reducer = (state = initialState1, action) => {
     switch(action.type) {
-        case "setFavoriteAnimal":
-            return { ...state, favoriteAnimal: action.value };
-//+ added just below here
-        case "setanswer1":
-            return { ...state, answer1: action.value};
+        case "setFavoriteAnimal1":
+            return { ...state, favoriteAnimal1: action.value };
 
         case "setPersonData":
             return { ...state, personData: action.value };
@@ -47,18 +40,10 @@ export { store };
 // Action Creators...
 //
 
-const setFavoriteAnimal = (favoriteAnimal) => {
+const setFavoriteAnimal1 = (favoriteAnimal1) => {
     return {
-        type: "setFavoriteAnimal",
-        value: favoriteAnimal,
-    };
-}
-
-//+ added below one too
-const setanswer1 = (answer1) => {
-    return {
-        type: "setanswer1",
-        value: answer1,
+        type: "setFavoriteAnimal1",
+        value: favoriteAnimal1,
     };
 }
 
@@ -78,4 +63,4 @@ const watchPersonData = () => {
     };
 }
 
-export { setFavoriteAnimal, setanswer1, setPersonData, watchPersonData };
+export { setFavoriteAnimal1, setPersonData, watchPersonData };
