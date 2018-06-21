@@ -1,11 +1,9 @@
-import React from 'react';
-import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput, Button } from 'react-native';
-import { TestComponent } from './../components/AppComponents';
-import * as firebase from 'firebase';
+import React, { Component } from 'react';
+import { AppRegistry, ScrollView, StyleSheet, Image, View, Text, TextInput, Button, Alert } from 'react-native';
 import { connect } from 'react-redux';
 import { setFavoriteAnimal1, watchPersonData } from './../redux/app-redux2';
 
-const mapStateToProps1 = (state) => {
+const mapStateToProps = (state) => {
   return {
     favoriteAnimal1: state.favoriteAnimal1,
     personData: state.personData,
@@ -51,7 +49,7 @@ class Devo extends React.Component {
           value={this.state.favoriteAnimal1}
           onChangeText={(text) => { this.setState({favoriteAnimal1: text}) }}
         />
-        <Button title="Please Work" onPress={this.onSetFavoriteAnimalPress1} />
+        <Button title="Set Favorite Animal" onPress={this.onSetFavoriteAnimalPress1} />
 
         <Text>{this.props.personData.firstName}</Text>
         <Text>{this.props.personData.lastName}</Text>
@@ -64,7 +62,7 @@ const styles = StyleSheet.create({
 
 });
 
-export default connect(mapStateToProps1, mapDispatchToProps1)(Devo);
+export default connect(mapStateToProps, mapDispatchToProps1)(Devo);
 
 /*export default class ScrollingView extends Component {
   render() {

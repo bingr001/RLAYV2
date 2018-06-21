@@ -7,8 +7,8 @@ import * as firebase from 'firebase';
 // Initial State...
 //
 
-const initialState = {
-    favoriteAnimal1: "duck",
+const initialState1 = {
+    favoriteAnimal1: "cat",
     personData: { },
 };
 
@@ -16,7 +16,7 @@ const initialState = {
 // Reducer...
 //
 
-const reducer = (state = initialState, action) => {
+const reducer = (state = initialState1, action) => {
     switch(action.type) {
         case "setFavoriteAnimal1":
             return { ...state, favoriteAnimal1: action.value };
