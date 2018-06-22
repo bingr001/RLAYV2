@@ -73,8 +73,8 @@ class Devo extends React.Component {
 
   render() {
     return (
-      <View style={{paddingTop:20}}>
 
+      <ScrollView style={{flex: 1, padding: 20, paddingTop:20}}>
 
         <Text>{this.props.personData.firstName}</Text>
         <Text>{this.props.personData.lastName}</Text>
@@ -132,7 +132,8 @@ class Devo extends React.Component {
         />
         <Button title="Save" onPress={this.onSetFavoriteAnimalPress6} />
 
-      </View>
+      </ScrollView>
+
     );
   }
 }
