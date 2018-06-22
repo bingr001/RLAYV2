@@ -3,18 +3,32 @@ import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, 
 import { TestComponent } from './../components/AppComponents';
 import * as firebase from 'firebase';
 import { connect } from 'react-redux';
-import { setanswer1, watchPersonData } from './../redux/app-redux';
+import {
+  setanswer1, setanswer2, setanswer3, setanswer4,
+  setanswer5, setanswer6, watchPersonData
+        } from './../redux/app-redux';
 
 const mapStateToProps1 = (state) => {
   return {
     answer1: state.answer1,
+    answer2: state.answer2,
+    answer3: state.answer3,
+    answer4: state.answer4,
+    answer5: state.answer5,
+    answer6: state.answer6,
     personData: state.personData,
   };
 }
 
+
 const mapDispatchToProps1 = (dispatch) => {
   return {
     setanswer1: (text) => { dispatch(setanswer1(text)) },
+    setanswer2: (text) => { dispatch(setanswer2(text)) },
+    setanswer3: (text) => { dispatch(setanswer3(text)) },
+    setanswer4: (text) => { dispatch(setanswer4(text)) },
+    setanswer5: (text) => { dispatch(setanswer5(text)) },
+    setanswer6: (text) => { dispatch(setanswer6(text)) },
     watchPersonData: () => { dispatch(watchPersonData()) },
   };
 }
@@ -40,6 +54,21 @@ class Devo extends React.Component {
   onSetFavoriteAnimalPress1 = () => {
     this.props.setanswer1(this.state.answer1);
   }
+  onSetFavoriteAnimalPress2 = () => {
+    this.props.setanswer2(this.state.answer2);
+  }
+  onSetFavoriteAnimalPress3 = () => {
+    this.props.setanswer3(this.state.answer3);
+  }
+  onSetFavoriteAnimalPress4 = () => {
+    this.props.setanswer4(this.state.answer4);
+  }
+  onSetFavoriteAnimalPress5 = () => {
+    this.props.setanswer5(this.state.answer5);
+  }
+  onSetFavoriteAnimalPress6 = () => {
+    this.props.setanswer6(this.state.answer6);
+  }
 
 
   render() {
@@ -50,13 +79,59 @@ class Devo extends React.Component {
         <Text>{this.props.personData.firstName}</Text>
         <Text>{this.props.personData.lastName}</Text>
 
+        <Text>{this.props.personData.question1}</Text>
         <Text>{this.props.answer1}</Text>
-
         <TextInput style={{borderWidth:1, width: 200, height: 40}}
           value={this.state.answer1}
           onChangeText={(text) => { this.setState({answer1: text}) }}
         />
-        <Button title="Please Work" onPress={this.onSetFavoriteAnimalPress1} />
+        <Button title="Save" onPress={this.onSetFavoriteAnimalPress1} />
+
+
+        <Text>{this.props.personData.question2}</Text>
+        <Text>{this.props.answer2}</Text>
+        <TextInput style={{borderWidth:1, width: 200, height: 40}}
+          value={this.state.answer2}
+          onChangeText={(text) => { this.setState({answer2: text}) }}
+        />
+        <Button title="Save" onPress={this.onSetFavoriteAnimalPress2} />
+
+
+        <Text>{this.props.personData.question3}</Text>
+        <Text>{this.props.answer3}</Text>
+        <TextInput style={{borderWidth:1, width: 200, height: 40}}
+          value={this.state.answer3}
+          onChangeText={(text) => { this.setState({answer3: text}) }}
+        />
+        <Button title="Save" onPress={this.onSetFavoriteAnimalPress3} />
+
+
+        <Text>{this.props.personData.question4}</Text>
+        <Text>{this.props.answer4}</Text>
+        <TextInput style={{borderWidth:1, width: 200, height: 40}}
+          value={this.state.answer4}
+          onChangeText={(text) => { this.setState({answer4: text}) }}
+        />
+        <Button title="Save" onPress={this.onSetFavoriteAnimalPress4} />
+
+
+        <Text>{this.props.personData.question5}</Text>
+        <Text>{this.props.answer5}</Text>
+        <TextInput style={{borderWidth:1, width: 200, height: 40}}
+          value={this.state.answer5}
+          onChangeText={(text) => { this.setState({answer5: text}) }}
+        />
+        <Button title="Save" onPress={this.onSetFavoriteAnimalPress5} />
+
+
+        <Text>{this.props.personData.question3}</Text>
+        <Text>{this.props.answer6}</Text>
+        <TextInput style={{borderWidth:1, width: 200, height: 40}}
+          value={this.state.answer6}
+          onChangeText={(text) => { this.setState({answer6: text}) }}
+        />
+        <Button title="Save" onPress={this.onSetFavoriteAnimalPress6} />
+
       </View>
     );
   }
