@@ -45,6 +45,11 @@ class Devo extends React.Component {
   render() {
     return (
       <View style={{paddingTop:20}}>
+
+
+        <Text>{this.props.personData.firstName}</Text>
+        <Text>{this.props.personData.lastName}</Text>
+
         <Text>{this.props.answer1}</Text>
 
         <TextInput style={{borderWidth:1, width: 200, height: 40}}
@@ -52,9 +57,6 @@ class Devo extends React.Component {
           onChangeText={(text) => { this.setState({answer1: text}) }}
         />
         <Button title="Please Work" onPress={this.onSetFavoriteAnimalPress1} />
-
-        <Text>{this.props.personData.firstName}</Text>
-        <Text>{this.props.personData.lastName}</Text>
       </View>
     );
   }

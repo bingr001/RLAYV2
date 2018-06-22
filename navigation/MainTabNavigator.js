@@ -4,11 +4,15 @@ import { Ionicons } from '@expo/vector-icons';
 import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 import TestScreen from '../screens/TestScreen';
+import Devo from '../screens/Devo';
 
 export default TabNavigator(
   {
     Test: {
       screen: TestScreen,
+    },
+    Devo: {
+      screen: Devo,
     },
   },
   {
