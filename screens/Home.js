@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StatusBar } from 'react-native';
+import { ScrollView,View, StatusBar } from 'react-native';
 
 import { Container } from '../components/Container';
 import { DevoButton } from '../components/Buttons';
@@ -32,12 +32,12 @@ class Home extends Component {
             translucent={false}
             barStyle="dark-content"/>
         </View>
-        <View style={styles.wrapper}>
+        <ScrollView style={styles.wrapper}>
           <DevoButton onPress={this.handleDevo} />
           <ScheduleButton onPress={this.handleSchedule} />
           <LeadersButton onPress={this.handleLeaders} />
 
-        </View>
+        </ScrollView>
 
       </Container>
     );

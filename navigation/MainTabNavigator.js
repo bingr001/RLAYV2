@@ -9,14 +9,14 @@ import Home from '../screens/Home';
 
 export default TabNavigator(
   {
-    Test: {
-      screen: TestScreen,
+    Home: {
+      screen: Home,
     },
     Devo: {
       screen: Devo,
     },
-    Home: {
-      screen: Home,
+    Test: {
+      screen: TestScreen,
     },
   },
   {
