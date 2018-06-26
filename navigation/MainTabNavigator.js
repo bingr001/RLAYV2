@@ -5,6 +5,7 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 import TestScreen from '../screens/TestScreen';
 import Devo from '../screens/Devo';
+import Home from '../screens/Home';
 
 export default TabNavigator(
   {
@@ -13,6 +14,9 @@ export default TabNavigator(
     },
     Devo: {
       screen: Devo,
+    },
+    Home: {
+      screen: Home,
     },
   },
   {
