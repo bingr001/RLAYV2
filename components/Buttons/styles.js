@@ -24,7 +24,11 @@ export default EStyleSheet.create({
   icon: {
     flex: 1,
     alignItems: 'center',
-
+    justifyContent: 'space-around',
+    flex: 1,
+    alignSelf: 'stretch',
+    width: undefined,
+    height: undefined,
     //marginRight: 5,
     //marginLeft: 5,
     margin:20,

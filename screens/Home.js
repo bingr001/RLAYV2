@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import { View, StatusBar } from 'react-native';
+import { ScrollView,View, StatusBar } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
+
 
 import { Container } from '../components/Container';
 import { DevoButton } from '../components/Buttons';
 import { ScheduleButton } from '../components/Buttons';
 import { LeadersButton } from '../components/Buttons';
-import styles from '../components/Buttons/styles';
 
 class Home extends Component {
 
-  handleDevo = () => {
-    console.log('press Devo');
+  /*handleDevo = () =>
+  {
+    onPress={() => navigate('Devo')}
   };
 
   handleSchedule = () => {
@@ -20,9 +22,11 @@ class Home extends Component {
   handleLeaders = () => {
     console.log('press Leaders');
   };
+*/
 
 
   render() {
+    const { navigate } = this.props.navigation;
     return(
 
       <Container>
@@ -32,19 +36,36 @@ class Home extends Component {
             translucent={false}
             barStyle="dark-content"/>
         </View>
-        <View style={styles.wrapper}>
-          <DevoButton onPress={this.handleDevo} />
-          <ScheduleButton onPress={this.handleSchedule} />
+        <ScrollView style={styles.wrapper}>
+          <DevoButton onPress={() => navigate('Devo')} />
+          <ScheduleButton onPress={() => navigate('Schedule')} />
           <LeadersButton onPress={this.handleLeaders} />
 
-        </View>
+        </ScrollView>
 
       </Container>
     );
   }
 }
 
-
+const styles = EStyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+  },
+  wrapper: {
+    flex: 0,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
+  countContainer: {
+    alignItems: 'center',
+    padding: 10
+  },
+})
 
 
 export default Home;
