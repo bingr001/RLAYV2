@@ -6,6 +6,7 @@ import Colors from '../constants/Colors';
 import Schedule from '../screens/Schedule';
 import Devo from '../screens/Devo';
 import Home from '../screens/Home';
+import Leaders from '../screens/Leaders';
 
 export default TabNavigator(
   {
@@ -18,6 +19,9 @@ export default TabNavigator(
     Schedule: {
       screen: Schedule,
     },
+    Leaders: {
+      screen: Leaders,
+    },
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -25,7 +29,7 @@ export default TabNavigator(
         const { routeName } = navigation.state;
         let iconName;
         switch (routeName) {
-          case 'Test':
+          case 'Schedule':
             iconName =
               Platform.OS === 'ios'
                 ? `ios-information-circle${focused ? '' : '-outline'}`
