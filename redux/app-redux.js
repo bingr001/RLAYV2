@@ -18,6 +18,10 @@ const initialState = {
     answer4: "doggy",
     answer5: "kitty",
     answer6: "racoon",
+    event1: "8 AM Breakfast",
+    event2: "9 AM Prayer",
+    event3: "10 AM hula hoop",
+    event4: "11 AM water relay",
 };
 
 
@@ -42,6 +46,16 @@ const reducer = (state = initialState, action) => {
             return { ...state, answer5: action.value};
         case "setanswer6":
             return { ...state, answer6: action.value};
+
+        case "event1":
+            return { ...state, answer6: action.value};
+        case "event2":
+            return { ...state, answer6: action.value};
+        case "event3":
+            return { ...state, answer6: action.value};
+        case "event4":
+            return { ...state, answer6: action.value};
+
 
         case "setPersonData":
             return { ...state, personData: action.value };
@@ -105,6 +119,34 @@ const setanswer5 = (answer5) => {
     };
 }
 
+const setevent1 = (event1) => {
+    return {
+      type: "setevent1",
+      value: event1,
+    };
+}
+
+const setevent2 = (event2) => {
+    return {
+      type: "setevent2",
+      value: event2,
+    };
+}
+
+const setevent3 = (event3) => {
+    return {
+      type: "setevent3",
+      value: event3,
+    };
+}
+
+const setevent4 = (event4) => {
+    return {
+      type: "setevent4",
+      value: event4,
+    };
+}
+
 const setanswer6 = (answer6) => {
     return {
         type: "setanswer6",
@@ -130,4 +172,4 @@ const watchPersonData = () => {
     };
 }
 
-export { setFavoriteAnimal, setanswer1, setanswer2, setanswer3, setanswer4, setanswer5, setanswer6, setPersonData, watchPersonData };
+export { setFavoriteAnimal, setanswer1, setanswer2, setanswer3, setanswer4, setanswer5, setanswer6, setevent1, setevent2, setevent3, setevent4, setPersonData, watchPersonData };

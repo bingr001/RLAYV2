@@ -3,23 +3,37 @@ import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, 
 import { TestComponent } from './../components/AppComponents';
 import * as firebase from 'firebase';
 import { connect } from 'react-redux';
-import { setFavoriteAnimal, watchPersonData } from './../redux/app-redux';
+import { event1, event2, event3, event4,
+  watchPersonData
+        } from './../redux/app-redux';
 
-const mapStateToProps = (state) => {
+const mapStateToProps1 = (state) => {
   return {
-    favoriteAnimal: state.favoriteAnimal,
+
     personData: state.personData,
+    event1: state.event1,
+    event2: state.event2,
+    event3: state.event3,
+    event4: state.event4,
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
+
+const mapDispatchToProps1 = (dispatch) => {
   return {
-    setFavoriteAnimal: (text) => { dispatch(setFavoriteAnimal(text)) },
+    setanswer1: (text) => { dispatch(setanswer1(text)) },
+    setanswer2: (text) => { dispatch(setanswer2(text)) },
+    setanswer3: (text) => { dispatch(setanswer3(text)) },
+    setanswer4: (text) => { dispatch(setanswer4(text)) },
+    setanswer5: (text) => { dispatch(setanswer5(text)) },
+    setanswer6: (text) => { dispatch(setanswer6(text)) },
+
+
     watchPersonData: () => { dispatch(watchPersonData()) },
   };
 }
 
-class TestScreen extends React.Component {
+class Devo extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -27,7 +41,7 @@ class TestScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      favoriteAnimal: this.props.favoriteAnimal,
+      answer1: this.props.answer1,
     }
 
     this.props.watchPersonData();
@@ -37,25 +51,47 @@ class TestScreen extends React.Component {
     firebase.auth().signOut();
   }
 
-  onSetFavoriteAnimalPress = () => {
-    this.props.setFavoriteAnimal(this.state.favoriteAnimal);
+  onSetFavoriteAnimalPress1 = () => {
+    this.props.setanswer1(this.state.answer1);
   }
+  onSetFavoriteAnimalPress2 = () => {
+    this.props.setanswer2(this.state.answer2);
+  }
+  onSetFavoriteAnimalPress3 = () => {
+    this.props.setanswer3(this.state.answer3);
+  }
+  onSetFavoriteAnimalPress4 = () => {
+    this.props.setanswer4(this.state.answer4);
+  }
+  onSetFavoriteAnimalPress5 = () => {
+    this.props.setanswer5(this.state.answer5);
+  }
+  onSetFavoriteAnimalPress6 = () => {
+    this.props.setanswer6(this.state.answer6);
+  }
+
 
   render() {
     return (
-      <View style={{paddingTop:20}}>
-        <Button title="Signout" onPress={this.onSignoutPress} />
-        <Text>{this.props.favoriteAnimal}</Text>
 
-        <TextInput style={{borderWidth:1, width: 200, height: 40}}
-          value={this.state.favoriteAnimal}
-          onChangeText={(text) => { this.setState({favoriteAnimal: text}) }}
-        />
-        <Button title="Set Favorite Animal" onPress={this.onSetFavoriteAnimalPress} />
+      <ScrollView style={{flex: 1, padding: 20, paddingTop:20}}>
+        <Text
+          style={{fontSize: 30,
+          fontWeight: 'bold',
+          textAlign: 'center',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',}}
+        > 
 
-        <Text>{this.props.personData.firstName}</Text>
-        <Text>{this.props.personData.lastName}</Text>
-      </View>
+          Day One</Text>
+
+        <Text>{this.props.personData.event1}</Text>
+        <Text>{this.props.personData.event2}</Text>
+        <Text>{this.props.personData.event3}</Text>
+        <Text>{this.props.personData.event4}</Text>
+      </ScrollView>
+
     );
   }
 }
@@ -64,4 +100,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(TestScreen);
+export default connect(mapStateToProps1, mapDispatchToProps1)(Devo);
