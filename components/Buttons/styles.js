@@ -22,7 +22,7 @@ export default EStyleSheet.create({
   //  alignItems: 'flex-start',
   },
   icon: {
-    flex: .5,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'space-around',
     flex: 1,
