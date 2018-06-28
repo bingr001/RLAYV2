@@ -38,7 +38,7 @@ class Home extends Component {
         </View>
         <ScrollView style={styles.wrapper}>
           <DevoButton onPress={() => navigate('Devo')} />
-          <ScheduleButton onPress={this.handleSchedule} />
+          <ScheduleButton onPress={() => navigate('Schedule')} />
           <LeadersButton onPress={this.handleLeaders} />
 
         </ScrollView>
