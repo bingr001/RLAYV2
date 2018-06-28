@@ -10,20 +10,6 @@ import { LeadersButton } from '../components/Buttons';
 
 class Home extends Component {
 
-  /*handleDevo = () =>
-  {
-    onPress={() => navigate('Devo')}
-  };
-
-  handleSchedule = () => {
-    console.log('press Schedule');
-  };
-
-  handleLeaders = () => {
-    console.log('press Leaders');
-  };
-*/
-
 
   render() {
     const { navigate } = this.props.navigation;
