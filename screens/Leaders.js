@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput, Button } from 'react-native';
+import { ScrollView, StyleSheet, Text, } from 'react-native';
 import JonFitz from '../components/LeaderBios/JonFitz';
 import DaveCreel from "../components/LeaderBios/DaveCreel";
 import OliviaMazurek from "../components/LeaderBios/OliviaMazurek";

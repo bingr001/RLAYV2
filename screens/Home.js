@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView,View, StatusBar } from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
+import { ScrollView,View, StatusBar, StyleSheet } from 'react-native';
 
 
 import { Container } from '../components/Container';
@@ -10,48 +9,45 @@ import { LeadersButton } from '../components/Buttons';
 
 class Home extends Component {
 
-
   render() {
     const { navigate } = this.props.navigation;
     return(
+      <View style={styles.containerStyle}>
+        <StatusBar
+          translucent={false}
+          barStyle="dark-content" />
+        <Container >
+          <ScrollView >
+            <View>
+              <DevoButton onPress={() => navigate('Devo')} />
+            </View>
+            <View>
+              <ScheduleButton onPress={() => navigate('Schedule')} />
+            </View>
+            <View>
+              <LeadersButton onPress={() => navigate('Leaders')} />
+            </View>
 
-      <Container>
+          </ScrollView>
 
-        <View>
-          <StatusBar
-            translucent={false}
-            barStyle="dark-content"/>
-        </View>
-        <ScrollView style={styles.wrapper}>
-          <DevoButton onPress={() => navigate('Devo')} />
-          <ScheduleButton onPress={() => navigate('Schedule')} />
-          <LeadersButton onPress={this.handleLeaders} />
+        </Container>
+      </View>
 
-        </ScrollView>
-
-      </Container>
     );
   }
 }
 
-const styles = EStyleSheet.create({
-  container: {
-    flex: 1,
+const styles = {
+  containerStyle: {
+    borderBottomWidth: 1,
+    padding: 5,
+    backgroundColor: '#F5FCFF',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-  },
-  wrapper: {
-    flex: 0,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-  },
-  countContainer: {
-    alignItems: 'center',
-    padding: 10
-  },
-})
+    borderColor: '#ddd',
+    position: 'relative'
+  }
+};
 
 
 export default Home;
