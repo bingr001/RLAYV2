@@ -7,6 +7,7 @@ import Schedule from '../screens/Schedule';
 import Devo from '../screens/Devo';
 import Home from '../screens/Home';
 import Leaders from '../screens/Leaders';
+import SignOut from '../screens/SignOut';
 
 export default TabNavigator(
   {
@@ -21,7 +22,10 @@ export default TabNavigator(
     },
     Leaders: {
       screen: Leaders,
-    }
+    },
+    SignOut: {
+      screen: SignOut,
+    },
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -56,6 +60,13 @@ export default TabNavigator(
               Platform.OS === 'ios'
                 ? `ios-people${focused ? '' : '-outline'}`
                 : 'md-people';
+        }
+        switch (routeName) {
+          case 'SignOut':
+            iconName =
+              Platform.OS === 'ios'
+                ? `ios-log-out${focused ? '' : '-outline'}`
+                : 'md-log-out';
         }
         return (
           <Ionicons
