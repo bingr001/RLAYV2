@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text,TextInput, Button } from 'react-native';
+import { ScrollView, View, KeyboardAvoidingView, StyleSheet, Text,TextInput, Button } from 'react-native';
 import * as firebase from 'firebase';
 import { connect } from 'react-redux';
 import {
@@ -71,172 +71,66 @@ class Devo extends React.Component {
 
 
   render() {
-    return (
+    return <KeyboardAvoidingView 
+    behavior="padding"
+    style={{ flex: 1, padding: 20, paddingTop: 20 }}>
+        <ScrollView>
+          <Text style={{ fontSize: 30, fontWeight: "bold", textAlign: "center", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+            Devotional Questions
+          </Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+            {"\n"}Day 1: Read Psalm 27{"\n"}
+          </Text>
 
-      <ScrollView style={{flex: 1, padding: 20, paddingTop:20}}>
-        <Text
-          style={{
-            fontSize: 30,
-            fontWeight: 'bold',
-            textAlign: 'center',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >Devotional Questions</Text>
-        <Text
-          style={{
-            fontSize: 20,
-            fontWeight: 'bold',
-            textAlign: 'center',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          {"\n"}Day 1: Read Psalm 27{"\n"}
-        </Text>
+          <Text>{this.props.personData.question1}</Text>
+          <Text>{this.props.answer1}</Text>
+          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer1} onChangeText={text => {
+              this.setState({ answer1: text });
+            }} />
+          <Button title="Save" onPress={this.onSetFavoriteAnimalPress1} />
 
+          <Text>{this.props.personData.question2}</Text>
+          <Text>{this.props.answer2}</Text>
+          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer2} onChangeText={text => {
+              this.setState({ answer2: text });
+            }} />
+          <Button title="Save" onPress={this.onSetFavoriteAnimalPress2} />
 
-        <Text>{this.props.personData.question1}</Text>
-        <Text>{this.props.answer1}</Text>
-        <TextInput style={{
-          height: 100,
-          borderColor: 'gray',
-          borderWidth: 1,
-          textAlign: 'center',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          flexWrap: 'wrap',}} 
-          multiline={true}
-          numberOfLines={4}
-          value={this.state.answer1}
-          onChangeText={(text) => { this.setState({answer1: text}) }}
-        />
-        <Button title="Save" onPress={this.onSetFavoriteAnimalPress1} />
+          <Text>{this.props.personData.question3}</Text>
+          <Text>{this.props.answer3}</Text>
+          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer3} onChangeText={text => {
+              this.setState({ answer3: text });
+            }} />
+          <Button title="Save" onPress={this.onSetFavoriteAnimalPress3} />
 
+          <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+            {"\n"}Day 2: Read Exodus 1{"\n"}
+          </Text>
 
-        <Text>{this.props.personData.question2}</Text>
-        <Text>{this.props.answer2}</Text>
-        <TextInput style={{
-          height: 100,
-          borderColor: 'gray',
-          borderWidth: 1,
-          textAlign: 'center',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          flexWrap: 'wrap',
-        }}
-          multiline={true}
-          numberOfLines={4}
-          value={this.state.answer2}
-          onChangeText={(text) => { this.setState({answer2: text}) }}
-        />
-        <Button title="Save" onPress={this.onSetFavoriteAnimalPress2} />
+          <Text>{this.props.personData.question4}</Text>
+          <Text>{this.props.answer4}</Text>
+          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer4} onChangeText={text => {
+              this.setState({ answer4: text });
+            }} />
+          <Button title="Save" onPress={this.onSetFavoriteAnimalPress4} />
 
+          <Text>{this.props.personData.question5}</Text>
+          <Text>{this.props.answer5}</Text>
+          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} onChangeText={text => {
+              this.setState({ answer5: text });
+            }} />
+          <Button title="Save" onPress={this.onSetFavoriteAnimalPress5} />
 
-        <Text>{this.props.personData.question3}</Text>
-        <Text>{this.props.answer3}</Text>
-        <TextInput style={{
-          height: 100,
-          borderColor: 'gray',
-          borderWidth: 1,
-          textAlign: 'center',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          flexWrap: 'wrap',
-        }}
-          multiline={true}
-          numberOfLines={4}
-          value={this.state.answer3}
-          onChangeText={(text) => { this.setState({answer3: text}) }}
-        />
-        <Button title="Save" onPress={this.onSetFavoriteAnimalPress3} />
+          <Text>{this.props.personData.question3}</Text>
+          <Text>{this.props.answer6}</Text>
+          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer6} onChangeText={text => {
+              this.setState({ answer6: text });
+            }} />
+          <Button title="Save" onPress={this.onSetFavoriteAnimalPress6} />
+        <View style={{ height: 60 }} />
 
-
-        <Text
-          style={{
-            fontSize: 20,
-            fontWeight: 'bold',
-            textAlign: 'center',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          {"\n"}Day 2: Read Exodus 1{"\n"}
-        </Text>
-
-        <Text>{this.props.personData.question4}</Text>
-        <Text>{this.props.answer4}</Text>
-        <TextInput style={{
-          height: 100,
-          borderColor: 'gray',
-          borderWidth: 1,
-          textAlign: 'center',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          flexWrap: 'wrap',
-        }}
-          multiline={true}
-          numberOfLines={4}
-          value={this.state.answer4}
-          onChangeText={(text) => { this.setState({answer4: text}) }}
-        />
-        <Button title="Save" onPress={this.onSetFavoriteAnimalPress4} />
-
-
-        <Text>{this.props.personData.question5}</Text>
-        <Text>{this.props.answer5}</Text>
-        <TextInput style={{
-          height: 100,
-          borderColor: 'gray',
-          borderWidth: 1,
-          textAlign: 'center',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          flexWrap: 'wrap',
-        }}
-          multiline={true}
-          numberOfLines={4}
-          onChangeText={(text) => { this.setState({answer5: text}) }}
-        />
-        <Button title="Save" onPress={this.onSetFavoriteAnimalPress5} />
-
-
-        <Text>{this.props.personData.question3}</Text>
-        <Text>{this.props.answer6}</Text>
-        <TextInput style={{
-          height: 100,
-          borderColor: 'gray',
-          borderWidth: 1,
-          textAlign: 'center',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          flexWrap: 'wrap',
-        }}
-          multiline={true}
-          numberOfLines={4}
-          value={this.state.answer6}
-          onChangeText={(text) => { this.setState({answer6: text}) }}
-        />
-        <Button title="Save" onPress={this.onSetFavoriteAnimalPress6} />
-
-      </ScrollView>
-
-    );
+        </ScrollView>
+      </KeyboardAvoidingView>;
   }
 }
 
