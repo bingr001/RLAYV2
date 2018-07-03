@@ -33,12 +33,33 @@ export default TabNavigator(
         const { routeName } = navigation.state;
         let iconName;
         switch (routeName) {
+          case 'Home':
+            iconName =
+              Platform.OS === 'ios'
+                ? `ios-home${focused ? '' : '-outline'}`
+                : 'md-home';
+            break;
+        }
+        switch (routeName) {
+          case 'Devo':
+            iconName =
+              Platform.OS === 'ios'
+                ? `ios-book${focused ? '' : '-outline'}`
+                : 'md-book';
+        }
+        switch (routeName) {
           case 'Schedule':
             iconName =
               Platform.OS === 'ios'
-                ? `ios-information-circle${focused ? '' : '-outline'}`
-                : 'md-information-circle';
-            break;
+                ? `ios-calendar${focused ? '' : '-outline'}`
+                : 'md-calendar';
+        }
+        switch (routeName) {
+          case 'Leaders':
+            iconName =
+              Platform.OS === 'ios'
+                ? `ios-people${focused ? '' : '-outline'}`
+                : 'md-people';
         }
         return (
           <Ionicons
