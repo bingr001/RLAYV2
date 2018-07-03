@@ -7,6 +7,7 @@ import Schedule from '../screens/Schedule';
 import Devo from '../screens/Devo';
 import Home from '../screens/Home';
 import Leaders from '../screens/Leaders';
+import AdvancedDeck from '../screens/AdvancedDeck';
 
 export default TabNavigator(
   {
@@ -22,6 +23,9 @@ export default TabNavigator(
     Leaders: {
       screen: Leaders,
     },
+    AdvancedDeck: {
+      screen: AdvancedDeck,
+    }
   },
   {
     navigationOptions: ({ navigation }) => ({
