@@ -18,12 +18,18 @@ class Home extends Component {
           barStyle="dark-content" />
         <Container >
           <ScrollView >
+            <View style={{ height: 30 }} />
+
             <View>
               <DevoButton onPress={() => navigate('Devo')} />
             </View>
+            <View style={{ height: 30 }} />
+
             <View>
               <ScheduleButton onPress={() => navigate('Schedule')} />
             </View>
+            <View style={{ height: 30 }} />
+
             <View>
               <LeadersButton onPress={() => navigate('Leaders')} />
             </View>
@@ -41,7 +47,6 @@ const styles = {
   containerStyle: {
     borderBottomWidth: 1,
     padding: 5,
-    backgroundColor: '#F5FCFF',
     justifyContent: 'space-between',
     alignItems: 'center',
     borderColor: '#ddd',
