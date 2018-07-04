@@ -3,6 +3,9 @@ import React from 'react';
 import { StyleSheet, View, Text, TextInput, Button, Alert } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 import * as firebase from 'firebase';
+import { RkButton, RkTextInput, RkAvoidKeyboard} from 'react-native-ui-kitten';
+
+
 
 export default class LoginScreen extends React.Component {
 
@@ -36,36 +39,50 @@ export default class LoginScreen extends React.Component {
     }
 
     render() {
-        return (
-            <View style={{paddingTop:50, alignItems:"center"}}>
+        return <RkAvoidKeyboard onStartShouldSetResponder={e => true} onResponderRelease={e => Keyboard.dismiss()} style={{ paddingTop: 50, alignItems: "center" }}>
+            <Text
+              style={{
+                fontSize: 30,
+                fontWeight: "bold",
+                textAlign: "center",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              Login
+            </Text>
 
-                <Text>Login</Text> 
+            <View style={{ paddingBottom: 60 }} />
 
-                <TextInput style={{width: 200, height: 40, borderWidth: 1}}
-                    value={this.state.email}
-                    onChangeText={(text) => { this.setState({email: text}) }}
-                    placeholder="Email"
-                    keyboardType="email-address"
-                    autoCapitalize="none"
-                    autoCorrect={false}
-                />
+            <RkTextInput rkType="rounded" style={{ width: 300, height: 40, borderWidth: 3 }} value={this.state.email} onChangeText={text => {
+                this.setState({ email: text });
+              }} placeholder="Email" keyboardType="email-address" autoCapitalize="none" autoCorrect={false} />
 
-                <View style={{paddingTop:10}} />
+            <View style={{ paddingTop: 10 }} />
 
-                <TextInput style={{width: 200, height: 40, borderWidth: 1}}
-                    value={this.state.password}
-                    onChangeText={(text) => { this.setState({password: text}) }}
-                    placeholder="Password"
-                    secureTextEntry={true}
-                    autoCapitalize="none"
-                    autoCorrect={false}
-                />
+            <RkTextInput rkType="rounded" style={{ width: 300, height: 40, borderWidth: 3 }} value={this.state.password} onChangeText={text => {
+                this.setState({ password: text });
+              }} placeholder="Password" secureTextEntry={true} autoCapitalize="none" autoCorrect={false} />
 
-                <Button title="Login" onPress={this.onLoginPress} />
-                <Button title="Create account..." onPress={this.onCreateAccountPress} />
-                <Button title="Forgot Password..." onPress={this.onForgotPasswordPress} />
-            </View>
-        );
+            <View style={{ paddingTop: 10 }} />
+
+            <RkButton onPress={this.onLoginPress} rkType="rounded" style={{ width: 300, height: 40 }}>
+              Login
+            </RkButton>
+
+            <View style={{ paddingTop: 10 }} />
+
+            <RkButton onPress={this.onCreateAccountPress} rkType="rounded" style={{ width: 200, height: 40 }}>
+              CREATE ACCOUNT...
+            </RkButton>
+
+            <View style={{ paddingTop: 10 }} />
+
+            <RkButton onPress={this.onForgotPasswordPress} rkType="rounded" style={{ width: 200, height: 40 }}>
+              FORGOT PASSWORD...
+            </RkButton>
+          </RkAvoidKeyboard>;
     }
 }
 
