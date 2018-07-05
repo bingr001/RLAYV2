@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, View, Text, TextInput, Button, Alert } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 import * as firebase from 'firebase';
+import { RkButton, RkTextInput, RkAvoidKeyboard } from 'react-native-ui-kitten';
 
 export default class SignupScreen extends React.Component {
 
@@ -37,9 +38,17 @@ export default class SignupScreen extends React.Component {
         return (
             <View style={{paddingTop:50, alignItems:"center"}}>
 
-                <Text>Signup</Text>
+                <Text 
+                style={{
+                fontSize: 30,
+                fontWeight: "bold",
+                textAlign: "center",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center"
+                }}>Signup</Text>
 
-                <TextInput style={{width: 200, height: 40, borderWidth: 1}}
+                <RkTextInput rkType="rounded" style={{width: 300, height: 40, borderWidth: 3}}
                     value={this.state.email}
                     onChangeText={(text) => { this.setState({email: text}) }}
                     placeholder="Email"
@@ -50,7 +59,7 @@ export default class SignupScreen extends React.Component {
 
                 <View style={{paddingTop:10}} />
 
-                <TextInput style={{width: 200, height: 40, borderWidth: 1}}
+                <RkTextInput rkType="rounded" style={{width: 300, height: 40, borderWidth: 3}}
                     value={this.state.password}
                     onChangeText={(text) => { this.setState({password: text}) }}
                     placeholder="Password"
@@ -61,7 +70,7 @@ export default class SignupScreen extends React.Component {
 
                 <View style={{paddingTop:10}} />
 
-                <TextInput style={{width: 200, height: 40, borderWidth: 1}}
+                <RkTextInput rkType="rounded" style={{width: 300, height: 40, borderWidth: 3}}
                     value={this.state.passwordConfirm}
                     onChangeText={(text) => { this.setState({passwordConfirm: text}) }}
                     placeholder="Password (confirm)"
@@ -70,9 +79,15 @@ export default class SignupScreen extends React.Component {
                     autoCorrect={false}
                 />
 
-                <Button title="Signup" onPress={this.onSignupPress} />
+                <RkButton rkType="rounded" onPress={this.onSignupPress} style={{ width: 300, height: 40 }}>
+                    Signup
+                </RkButton>
+                
+                <View style={{ paddingTop: 10 }} />
 
-                <Button title="Back to Login" onPress={this.onBackToLoginPress} />
+                <RkButton rkType="rounded" onPress={this.onBackToLoginPress} >
+                    Back to Login
+                </RkButton>
             </View>
         );
     }
