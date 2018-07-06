@@ -8,20 +8,25 @@ import * as firebase from 'firebase';
 //
 
 const initialState = {
-    favoriteAnimal: "duck",
-    personData: { },
-    //+ testing for devo page
+  favoriteAnimal: "",
+  personData: {},
+  //+ testing for devo page
 
-    answer1: "cat",
-    answer2: "dog",
-    answer3: "dogg",
-    answer4: "doggy",
-    answer5: "kitty",
-    answer6: "racoon",
-    event1: "8 AM Breakfast",
-    event2: "9 AM Prayer",
-    event3: "10 AM hula hoop",
-    event4: "11 AM water relay",
+  answer1: "",
+  answer2: "",
+  answer3: "",
+  answer4: "",
+  answer5: "",
+  answer6: "",
+  answer8: "",
+  answer9: "",
+  answer10: "",
+  answer11: "",
+  answer12: "",
+  event1: "8 AM Breakfast",
+  event2: "9 AM Prayer",
+  event3: "10 AM hula hoop",
+  event4: "11 AM water relay"
 };
 
 
@@ -46,6 +51,18 @@ const reducer = (state = initialState, action) => {
             return { ...state, answer5: action.value};
         case "setanswer6":
             return { ...state, answer6: action.value};
+        case "setanswer7":
+            return { ...state, answer7: action.value };
+        case "setanswer8":
+            return { ...state, answer8: action.value };
+        case "setanswer9":
+            return { ...state, answer9: action.value };
+        case "setanswer10":
+            return { ...state, answer10: action.value };
+        case "setanswer11":
+            return { ...state, answer11: action.value };
+        case "setanswer12":
+            return { ...state, answer12: action.value };
 
         case "event1":
             return { ...state, answer6: action.value};
@@ -119,33 +136,7 @@ const setanswer5 = (answer5) => {
     };
 }
 
-const setevent1 = (event1) => {
-    return {
-      type: "setevent1",
-      value: event1,
-    };
-}
 
-const setevent2 = (event2) => {
-    return {
-      type: "setevent2",
-      value: event2,
-    };
-}
-
-const setevent3 = (event3) => {
-    return {
-      type: "setevent3",
-      value: event3,
-    };
-}
-
-const setevent4 = (event4) => {
-    return {
-      type: "setevent4",
-      value: event4,
-    };
-}
 
 const setanswer6 = (answer6) => {
     return {
@@ -154,7 +145,75 @@ const setanswer6 = (answer6) => {
     };
 }
 
+const setanswer7 = answer7 => {
+  return {
+    type: "setanswer7",
+    value: answer7
+  };
+};
 
+const setanswer8 = answer8 => {
+  return {
+    type: "setanswer8",
+    value: answer8
+  };
+};
+
+const setanswer9 = answer9 => {
+  return {
+    type: "setanswer9",
+    value: answer9
+  };
+};
+
+const setanswer10 = answer10 => {
+  return {
+    type: "setanswer10",
+    value: answer10
+  };
+};
+
+const setanswer11 = answer11 => {
+    return {
+        type: "setanswer11",
+        value: answer11
+    };
+};
+
+const setanswer12 = answer12 => {
+    return {
+        type: "setanswer12",
+        value: answer12
+    };
+};
+
+const setevent1 = (event1) => {
+    return {
+        type: "setevent1",
+        value: event1,
+    };
+}
+
+const setevent2 = (event2) => {
+    return {
+        type: "setevent2",
+        value: event2,
+    };
+}
+
+const setevent3 = (event3) => {
+    return {
+        type: "setevent3",
+        value: event3,
+    };
+}
+
+const setevent4 = (event4) => {
+    return {
+        type: "setevent4",
+        value: event4,
+    };
+}
 
 const setPersonData = (personData) => {
     return {
@@ -172,4 +231,4 @@ const watchPersonData = () => {
     };
 }
 
-export { setFavoriteAnimal, setanswer1, setanswer2, setanswer3, setanswer4, setanswer5, setanswer6, setevent1, setevent2, setevent3, setevent4, setPersonData, watchPersonData };
+export { setFavoriteAnimal, setanswer1, setanswer2, setanswer3, setanswer4, setanswer5, setanswer6, setanswer7, setanswer8, setanswer9, setanswer10, setanswer11, setanswer12, setevent1, setevent2, setevent3, setevent4, setPersonData, watchPersonData };
