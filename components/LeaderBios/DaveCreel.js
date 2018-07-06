@@ -12,34 +12,24 @@ const DaveCreel = () => {
       <Card>
         <CardSection>
           <View>
-              <Image style={{
-                width: 300,
-                height: 300,
-                
-                backgroundColor: '#F5FCFF',
-              }}
-                resizeMode="contain"
-                source={require("./LeaderImages/davepic.jpg")} />
+            <Image style={{ width: 300, height: 300,
+                backgroundColor: "#F5FCFF" }} resizeMode="contain" source={require("./LeaderImages/davepic.jpg")} />
           </View>
 
           <View>
-            <Text>Dave Creel</Text>
+            <Text style={{ fontWeight: "bold" }}>Dave Creel</Text>
           </View>
-          <View>
-            <Text>
-              Favorite Movie: Heavy Weights 
-              Favorite Book: For Whom the Bell
-              Tolls by Ernest Hemingway 
-              Favorite Food: Tacos, always tacos
-              Favorite Book of the Bible: James (It's a straightforward book of
-              practical wisdom that serves as a constant reminder on how our
-              everyday actions can be a reflection of Christ's love) 
-              Favorite Band: Blind Pilot 
-              Favorite Hobbies: Cooking food for friends,
-              camping, playing music
+        <View >
+            <Text style={{ width: 300 }}>
+              Favorite Movie: Heavy Weights{"\n"}
+              Favorite Book: For Whom the Bell{"\n"}
+              Tolls by Ernest Hemingway{"\n"}
+              Favorite Food: Tacos, always tacos{"\n"}
+              Favorite Book of the Bible: James (It's a straightforward book of practical wisdom that serves as a constant reminder on how our everyday actions can be a reflection of Christ's love){"\n"}
+              Favorite Band: Blind Pilot{"\n"}
+              Favorite Hobbies: Cooking food for friends, camping, playing music{"\n"}
             </Text>
           </View>
-
         </CardSection>
       </Card>
     </View>;

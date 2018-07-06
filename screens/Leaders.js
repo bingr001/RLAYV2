@@ -3,6 +3,10 @@ import { ScrollView, StyleSheet, Text, } from 'react-native';
 import JonFitz from '../components/LeaderBios/JonFitz';
 import DaveCreel from "../components/LeaderBios/DaveCreel";
 import OliviaMazurek from "../components/LeaderBios/OliviaMazurek";
+import ACSanford from '../components/LeaderBios/ACSanford';
+import ErikaRuiz from '../components/LeaderBios/ErikaRuiz';
+import LaurenCreel from '../components/LeaderBios/LaurenCreel';
+import BrentIngram from '../components/LeaderBios/BrentIngram';
 
 
 //Create a components
@@ -14,13 +18,13 @@ class Leaders extends Component {
           Leaders
         </Text>
 
+        <ACSanford />
+        <BrentIngram />
         <DaveCreel />
+        <ErikaRuiz />
         <JonFitz />
+        <LaurenCreel />
         <OliviaMazurek />
-        <Text>Brent Ingram</Text>
-        <Text>Lauren Creel</Text>
-        <Text>Erika Ruiz</Text>
-        <Text>AC Sanford</Text>
       </ScrollView>;
 
 
