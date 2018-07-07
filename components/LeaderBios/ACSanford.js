@@ -3,7 +3,7 @@ import { Text, View, Image } from 'react-native';
 import {
   Card,
   CardSection
-} from "/Users/brent/Projects/expo-firebase-redux-starter-master/components/common";
+} from "../common";
 
 // Create a component
 const ACSanford = () => {

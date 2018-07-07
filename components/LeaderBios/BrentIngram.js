@@ -1,9 +1,6 @@
 import React from 'react';
 import { Text, View, Image } from 'react-native';
-import {
-  Card,
-  CardSection
-} from "/Users/brent/Projects/expo-firebase-redux-starter-master/components/common";
+import { Card, CardSection } from "../common";
 
 // Create a component
 const BrentIngram = () => {
