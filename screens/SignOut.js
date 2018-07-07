@@ -1,8 +1,8 @@
 import React from 'react';
-import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput, Button } from 'react-native';
+import { StyleSheet,  View,  Button } from 'react-native';
 import * as firebase from 'firebase';
-import { connect } from 'react-redux';
-import { setFavoriteAnimal, watchPersonData } from './../redux/app-redux';
+import { RkButton, RkAvoidKeyboard } from "react-native-ui-kitten";
+
 
 
 
@@ -20,15 +20,22 @@ class SignOut extends React.Component {
 
 
   render() {
-    return (
-      <View style={{ paddingTop: 20 }}>
-        <Button title="Signout" onPress={this.onSignoutPress} />
-
-        
-        
-
-      </View>
-    );
+    return <View style={{ 
+      paddingTop: 20, 
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      }}>
+        <RkButton 
+        rkType="rounded" 
+        style={{ 
+          width: 300, 
+          height: 40,}} 
+        onPress={this.onSignoutPress}>
+          Signout
+        </RkButton>
+      </View>;
   }
 }
 
