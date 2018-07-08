@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, View, KeyboardAvoidingView, StyleSheet, Text,TextInput, Button } from 'react-native';
 import * as firebase from 'firebase';
 import { connect } from 'react-redux';
+import { RkButton } from 'react-native-ui-kitten';
 import {
   setanswer1, setanswer2, setanswer3, setanswer4,
   setanswer5, setanswer6, setanswer7, setanswer8,
@@ -127,46 +128,92 @@ class Devo extends React.Component {
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer1} onChangeText={text => {
               this.setState({ answer1: text });
             }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress1} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5, paddingBottom: 5 }}>
+            <RkButton style = {{backgroundColor: 'black' }} rkType = "rounded" onPress={this.onSetFavoriteAnimalPress1} >
+              Save
+            </RkButton>
+          </View>
+
+          <View style={{ height: 20 }} />
+
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question2}</Text>
           <Text>{this.props.answer2}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer2} onChangeText={text => {
               this.setState({ answer2: text });
             }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress2} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress2} >
+              Save
+            </RkButton>
+          </View>
+
+          <View style={{ height: 20 }} />
+
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question3}</Text>
           <Text>{this.props.answer3}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer3} onChangeText={text => {
               this.setState({ answer3: text });
             }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress3} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress3} >
+              Save
+            </RkButton>
+          </View>
+
+          <View style={{ height: 20 }} />
+
 
           <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
             {"\n"}Sunday: Read Luke 8:40-56 {"\n"}
           </Text>
+
+
+          <View style={{ height: 20 }} />
+
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question4}</Text>
           <Text>{this.props.answer4}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer4} onChangeText={text => {
               this.setState({ answer4: text });
             }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress4} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress4} >
+              Save
+            </RkButton>
+          </View>
+
+          <View style={{ height: 20 }} />
+
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question5}</Text>
           <Text>{this.props.answer5}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer5} onChangeText={text => {
               this.setState({ answer5: text });
             }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress5} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress5} >
+              Save
+            </RkButton>
+          </View>
+
+          <View style={{ height: 20 }} />
+
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question6}</Text>
           <Text>{this.props.answer6}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer6} onChangeText={text => {
               this.setState({ answer6: text });
             }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress6} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress6} >
+              Save
+            </RkButton>
+          </View>
+
+          <View style={{ height: 20 }} />
+
 
           <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
             {"\n"}Monday: Read Isaiah 30:15-26 {"\n"}
@@ -177,22 +224,43 @@ class Devo extends React.Component {
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer7} onChangeText={text => {
             this.setState({ answer7: text });
           }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress7} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress7} >
+              Save
+            </RkButton>
+          </View>
+
+          <View style={{ height: 20 }} />
+
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question8}</Text>
           <Text>{this.props.answer8}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer8} onChangeText={text => {
             this.setState({ answer8: text });
           }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress8} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress8} >
+              Save
+            </RkButton>
+          </View>
+
+          <View style={{ height: 20 }} />
+
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question9}</Text>
           <Text>{this.props.answer9}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer9} onChangeText={text => {
             this.setState({ answer9: text });
           }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress9} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress9} >
+              Save
+            </RkButton>
+          </View>
           
+          <View style={{ height: 20 }} />
+
+
           <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
             {"\n"}Tuesday: Read Colossians 3:12-17 {"\n"}
           </Text>
@@ -203,21 +271,39 @@ class Devo extends React.Component {
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer10} onChangeText={text => {
             this.setState({ answer10: text });
           }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress10} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress10} >
+              Save
+            </RkButton>
+          </View>
+
+         <View style={{ height: 20 }} />
+
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question11}</Text>
           <Text>{this.props.answer11}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer11} onChangeText={text => {
             this.setState({ answer11: text });
           }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress11} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress11} >
+              Save
+            </RkButton>
+          </View>
+
+         <View style={{ height: 20 }} />
+
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question12}</Text>
           <Text>{this.props.answer12}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer12} onChangeText={text => {
             this.setState({ answer12: text });
           }} />
-          <Button title="Save" onPress={this.onSetFavoriteAnimalPress12} />
+          <View style={{ alignItems: "center", paddingTop: 5, paddingBottom: 10, paddingBottom: 5 }}>
+            <RkButton style={{ backgroundColor: 'black' }} rkType="rounded" onPress={this.onSetFavoriteAnimalPress12} >
+              Save
+            </RkButton>
+          </View>
           <View style={{ height: 60 }} />
 
         </ScrollView>
