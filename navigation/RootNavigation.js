@@ -23,6 +23,7 @@ const RootStackNavigator = StackNavigator(
       },
     }),
   }
+
 );
 
 export default class RootNavigator extends React.Component {

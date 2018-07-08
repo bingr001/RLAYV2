@@ -124,21 +124,21 @@ class Devo extends React.Component {
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question1}</Text>
           <Text>{this.props.answer1}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer1} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer1} onChangeText={text => {
               this.setState({ answer1: text });
             }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress1} />
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question2}</Text>
           <Text>{this.props.answer2}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer2} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer2} onChangeText={text => {
               this.setState({ answer2: text });
             }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress2} />
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question3}</Text>
           <Text>{this.props.answer3}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer3} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer3} onChangeText={text => {
               this.setState({ answer3: text });
             }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress3} />
@@ -149,21 +149,21 @@ class Devo extends React.Component {
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question4}</Text>
           <Text>{this.props.answer4}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer4} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer4} onChangeText={text => {
               this.setState({ answer4: text });
             }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress4} />
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question5}</Text>
           <Text>{this.props.answer5}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer5} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer5} onChangeText={text => {
               this.setState({ answer5: text });
             }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress5} />
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question6}</Text>
           <Text>{this.props.answer6}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer6} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer6} onChangeText={text => {
               this.setState({ answer6: text });
             }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress6} />
@@ -174,21 +174,21 @@ class Devo extends React.Component {
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question7}</Text>
           <Text>{this.props.answer7}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer7} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer7} onChangeText={text => {
             this.setState({ answer7: text });
           }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress7} />
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question8}</Text>
           <Text>{this.props.answer8}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer8} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer8} onChangeText={text => {
             this.setState({ answer8: text });
           }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress8} />
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question9}</Text>
           <Text>{this.props.answer9}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer9} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer9} onChangeText={text => {
             this.setState({ answer9: text });
           }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress9} />
@@ -200,21 +200,21 @@ class Devo extends React.Component {
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question10}</Text>
           <Text>{this.props.answer10}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer10} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer10} onChangeText={text => {
             this.setState({ answer10: text });
           }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress10} />
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question11}</Text>
           <Text>{this.props.answer11}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer11} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer11} onChangeText={text => {
             this.setState({ answer11: text });
           }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress11} />
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question12}</Text>
           <Text>{this.props.answer12}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer12} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer12} onChangeText={text => {
             this.setState({ answer12: text });
           }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress12} />

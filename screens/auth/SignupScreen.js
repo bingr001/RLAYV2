@@ -16,6 +16,10 @@ export default class SignupScreen extends React.Component {
         };
     }
 
+    static navigationOptions = {
+        header: null
+    }
+
     onSignupPress = () => {
         if (this.state.password !== this.state.passwordConfirm) {
             Alert.alert("Passwords do not match");
@@ -35,61 +39,46 @@ export default class SignupScreen extends React.Component {
     }
 
     render() {
-        return (
-            <View style={{paddingTop:50, alignItems:"center"}}>
-
-                <Text 
-                style={{
+        return <View style={{ paddingTop: 50, alignItems: "center" }}>
+            <Text
+              style={{
                 fontSize: 30,
                 fontWeight: "bold",
                 textAlign: "center",
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center"
-                }}>Signup</Text>
+              }}
+            >
+              Signup
+            </Text>
 
-                <RkTextInput rkType="rounded" style={{width: 300, height: 40, borderWidth: 3}}
-                    value={this.state.email}
-                    onChangeText={(text) => { this.setState({email: text}) }}
-                    placeholder="Email"
-                    keyboardType="email-address"
-                    autoCapitalize="none"
-                    autoCorrect={false}
-                />
+            <RkTextInput rkType="rounded" style={{ width: 300, height: 40, borderWidth: 3 }} value={this.state.email} onChangeText={text => {
+                this.setState({ email: text });
+              }} placeholder="Email" keyboardType="email-address" autoCapitalize="none" autoCorrect={false} />
 
-                <View style={{paddingTop:10}} />
+            <View style={{ paddingTop: 10 }} />
 
-                <RkTextInput rkType="rounded" style={{width: 300, height: 40, borderWidth: 3}}
-                    value={this.state.password}
-                    onChangeText={(text) => { this.setState({password: text}) }}
-                    placeholder="Password"
-                    secureTextEntry={true}
-                    autoCapitalize="none"
-                    autoCorrect={false}
-                />
+            <RkTextInput rkType="rounded" style={{ width: 300, height: 40, borderWidth: 3 }} value={this.state.password} onChangeText={text => {
+                this.setState({ password: text });
+              }} placeholder="Password" secureTextEntry={true} autoCapitalize="none" autoCorrect={false} />
 
-                <View style={{paddingTop:10}} />
+            <View style={{ paddingTop: 10 }} />
 
-                <RkTextInput rkType="rounded" style={{width: 300, height: 40, borderWidth: 3}}
-                    value={this.state.passwordConfirm}
-                    onChangeText={(text) => { this.setState({passwordConfirm: text}) }}
-                    placeholder="Password (confirm)"
-                    secureTextEntry={true}
-                    autoCapitalize="none"
-                    autoCorrect={false}
-                />
+            <RkTextInput rkType="rounded" style={{ width: 300, height: 40, borderWidth: 3 }} value={this.state.passwordConfirm} onChangeText={text => {
+                this.setState({ passwordConfirm: text });
+              }} placeholder="Password (confirm)" secureTextEntry={true} autoCapitalize="none" autoCorrect={false} />
 
-                <RkButton rkType="rounded" onPress={this.onSignupPress} style={{ width: 300, height: 40 }}>
-                    Signup
-                </RkButton>
-                
-                <View style={{ paddingTop: 10 }} />
+            <RkButton rkType="rounded" onPress={this.onSignupPress} style={{ width: 300, height: 40, backgroundColor: "black" }}>
+              Signup
+            </RkButton>
 
-                <RkButton rkType="rounded" onPress={this.onBackToLoginPress} >
-                    Back to Login
-                </RkButton>
-            </View>
-        );
+            <View style={{ paddingTop: 10 }} />
+
+            <RkButton rkType="rounded" onPress={this.onBackToLoginPress} style={{ backgroundColor: "black" }}>
+              Back to Login
+            </RkButton>
+          </View>;
     }
 }
 

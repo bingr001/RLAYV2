@@ -15,6 +15,10 @@ export default class ForgotPasswordScreen extends React.Component {
         };
     }
 
+    static navigationOptions = {
+        header: null
+    }
+
     onResetPasswordPress = () => {
         firebase.auth().sendPasswordResetEmail(this.state.email)
             .then(() => {
@@ -41,16 +45,16 @@ export default class ForgotPasswordScreen extends React.Component {
             <RkTextInput rkType="rounded" style={{ width: 300, height: 40, borderWidth: 3 }} value={this.state.email} onChangeText={text => {
                 this.setState({ email: text });
               }} placeholder="Email" keyboardType="email-address" autoCapitalize="none" autoCorrect={false} />
-            
+
             <View style={{ paddingTop: 20 }} />
 
-            <RkButton rkType="rounded" onPress={this.onResetPasswordPress}>
+            <RkButton rkType="rounded" style={{ backgroundColor: "black" }} onPress={this.onResetPasswordPress}>
               Reset Password
             </RkButton>
 
             <View style={{ paddingTop: 10 }} />
 
-            <RkButton rkType="rounded" onPress={this.onBackToLoginPress}>
+            <RkButton rkType="rounded" style={{ backgroundColor: "black" }} onPress={this.onBackToLoginPress}>
               Back to Login..
             </RkButton>
           </View>;
