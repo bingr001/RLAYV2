@@ -39,7 +39,7 @@ export default class LoginScreen extends React.Component {
     }
 
     render() {
-        return <RkAvoidKeyboard onStartShouldSetResponder={e => true} onResponderRelease={e => Keyboard.dismiss()} style={{ paddingTop: 50, alignItems: "center" }}>
+        return <View style={{ paddingTop: 50, alignItems: "center" }}>
             <Text
               style={{
                 fontSize: 30,
@@ -82,7 +82,7 @@ export default class LoginScreen extends React.Component {
             <RkButton onPress={this.onForgotPasswordPress} rkType="rounded" style={{ width: 200, height: 40 }}>
               FORGOT PASSWORD...
             </RkButton>
-          </RkAvoidKeyboard>;
+          </View>;
     }
 }
 

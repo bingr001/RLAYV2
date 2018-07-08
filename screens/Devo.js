@@ -124,7 +124,7 @@ class Devo extends React.Component {
 
           <Text style={{ fontWeight: "bold" }}>{this.props.personData.question1}</Text>
           <Text>{this.props.answer1}</Text>
-          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 1, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer1} onChangeText={text => {
+          <TextInput style={{ height: 100, borderColor: "gray", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer1} onChangeText={text => {
               this.setState({ answer1: text });
             }} />
           <Button title="Save" onPress={this.onSetFavoriteAnimalPress1} />
