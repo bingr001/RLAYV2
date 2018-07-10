@@ -8,7 +8,7 @@ const BrentIngram = () => {
       <Card>
         <CardSection>
           <View>
-            <Image style={{ width: 300, height: 300, backgroundColor: "#F5FCFF" }} resizeMode="contain" source={require("./LeaderImages/davepic.jpg")} />
+            <Image style={{ width: 300, height: 300}} resizeMode="contain" source={require("./LeaderImages/brentpic.jpg")} />
           </View>
 
           <View>
@@ -16,13 +16,12 @@ const BrentIngram = () => {
           </View>
           <View>
             <Text style={{ width: 300 }}>
-              Favorite Movie: Heavy Weights{"\n"}
-              Favorite Book: For Whom the Bell{"\n"}
-              Tolls by Ernest Hemingway{"\n"}
-              Favorite Food: Tacos, always tacos{"\n"}
-              Favorite Book of the Bible: James (It's a straightforward book of practical wisdom that serves as a constant reminder on how our everyday actions can be a reflection of Christ's love){"\n"}
-              Favorite Band: Blind Pilot{"\n"}
-              Favorite Hobbies: Cooking food for friends, camping, playing music{"\n"}
+              Favorite Movie: The Notebook. Just Kidding, Lord of The Rings{"\n"}
+              Favorite Book: Mere Christianity by C.S. Lewis {"\n"}
+              Favorite Food: Chick-fil-A{"\n"}
+              Favorite Book of the Bible: Proverbs + Ephesians{"\n"}
+              Favorite Band: Chance the Rapper + Kings Kaleidoscope{"\n"}
+              Favorite Hobbies: Running Too Far + Video Games + Spending time with my wife and daughter{"\n"}
             </Text>
           </View>
         </CardSection>

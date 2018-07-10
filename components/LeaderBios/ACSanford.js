@@ -11,8 +11,7 @@ const ACSanford = () => {
       <Card>
         <CardSection>
           <View>
-            <Image style={{ width: 300, height: 300,
-                backgroundColor: "#F5FCFF" }} resizeMode="contain" source={require("./LeaderImages/davepic.jpg")} />
+            <Image style={{ width: 300, height: 300 }} resizeMode="contain" source={require("./LeaderImages/acpic.jpg")} />
           </View>
 
           <View>
@@ -20,13 +19,13 @@ const ACSanford = () => {
           </View>
           <View>
             <Text style={{ width: 300 }}>
-              Favorite Movie: Heavy Weights{"\n"}
-              Favorite Book: For Whom the Bell{"\n"}
-              Tolls by Ernest Hemingway{"\n"}
-              Favorite Food: Tacos, always tacos{"\n"}
-              Favorite Book of the Bible: James (It's a straightforward book of practical wisdom that serves as a constant reminder on how our everyday actions can be a reflection of Christ's love){"\n"}
-              Favorite Band: Blind Pilot{"\n"}
-              Favorite Hobbies: Cooking food for friends, camping, playing music{"\n"}
+              Favorite Movie: The Shawshank Redemption{"\n"}
+              Favorite Book: Uncle Tom's Cabin{"\n"}
+              Favorite Food: Cuban Sandwiches {"\n"}
+              Favorite Book of the Bible: James and Romans {"\n"}
+              Favorite Band: Hillsong United {"\n"}
+              Favorite Hobbies: Flying to Florida. {"\n"}
+              Fun Florida Fact: It is illegal for an unmarried woman to skydive on Sundays {"\n"}
             </Text>
           </View>
         </CardSection>

@@ -9,8 +9,8 @@ const DaveCreel = () => {
       <Card>
         <CardSection>
           <View>
-            <Image style={{ width: 300, height: 300,
-                backgroundColor: "#F5FCFF" }} resizeMode="contain" source={require("./LeaderImages/davepic.jpg")} />
+            <Image style={{ width: 300, height: 200
+              }} resizeMode="contain" source={require("./LeaderImages/davepic.jpg")} />
           </View>
 
           <View>
