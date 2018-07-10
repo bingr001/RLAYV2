@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "RLAY Youth",
+    "name": "RLA Youth",
     "description": "Camp app for RLAY Youth",
-    "slug": "RLAY-Youth",
+    "slug": "RLA-Youth",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
