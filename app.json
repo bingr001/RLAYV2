@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "expo-firebase-redux-starter",
-    "description": "A very interesting project.",
-    "slug": "expo-firebase-redux-starter",
+    "name": "RLAY Youth",
+    "description": "Camp app for RLAY Youth",
+    "slug": "RLAY-Youth",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
@@ -15,7 +15,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.brentingram.rlayyouth"
+    },
+    "android": {
+      "package": "com.brentingram.rlayyouth"
     }
   }
 }
