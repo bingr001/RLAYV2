@@ -316,3 +316,4 @@ const styles = StyleSheet.create({
 });
 
 export default connect(mapStateToProps1, mapDispatchToProps1)(Devo);
+

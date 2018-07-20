@@ -12,7 +12,7 @@ const MarielleMorad= () => {
           </View>
 
           <View>
-            <Text style={{ fontWeight: "bold" }}>Marielle Morad</Text>
+            <Text style={{ fontWeight: "bold" }}>Marielle Wakim</Text>
           </View>
           <View>
             <Text style={{ width: 300 }}>
