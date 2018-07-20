@@ -123,7 +123,7 @@ class Devo extends React.Component {
             {"\n"}Saturday: Read Psalm 23{"\n"}
           </Text>
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question1}</Text>
+        <Text style={{ fontWeight: "bold" }}>"What stood out to you about this Psalm?"</Text>
           <Text>{this.props.answer1}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer1} onChangeText={text => {
               this.setState({ answer1: text });
@@ -137,7 +137,7 @@ class Devo extends React.Component {
           <View style={{ height: 20 }} />
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question2}</Text>
+        <Text style={{ fontWeight: "bold" }}>"Have you ever gone through an experience in life where you knew God was leading you and guiding you, taking care of you or providing for you? " </Text>
           <Text>{this.props.answer2}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer2} onChangeText={text => {
               this.setState({ answer2: text });
@@ -151,7 +151,7 @@ class Devo extends React.Component {
           <View style={{ height: 20 }} />
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question3}</Text>
+        <Text style={{ fontWeight: "bold" }}>"What do you think David is trying to help us understand about our relationship with God by calling him our Shepherd us his sheep?"</Text>
           <Text>{this.props.answer3}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer3} onChangeText={text => {
               this.setState({ answer3: text });
@@ -173,7 +173,7 @@ class Devo extends React.Component {
           <View style={{ height: 20 }} />
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question4}</Text>
+        <Text style={{ fontWeight: "bold" }}>"What stood out to you in this portion of Scripture?"</Text>
           <Text>{this.props.answer4}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer4} onChangeText={text => {
               this.setState({ answer4: text });
@@ -187,7 +187,7 @@ class Devo extends React.Component {
           <View style={{ height: 20 }} />
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question5}</Text>
+        <Text style={{ fontWeight: "bold" }}>"Do you think Jesus was annoyed that the woman touched him in Vs. 44? Why or why not?"</Text>
           <Text>{this.props.answer5}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer5} onChangeText={text => {
               this.setState({ answer5: text });
@@ -201,7 +201,7 @@ class Devo extends React.Component {
           <View style={{ height: 20 }} />
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question6}</Text>
+        <Text style={{ fontWeight: "bold" }}>"What do you think motivated Jesus to heal and raise people from the dead?"</Text>
           <Text>{this.props.answer6}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer6} onChangeText={text => {
               this.setState({ answer6: text });
@@ -219,7 +219,7 @@ class Devo extends React.Component {
             {"\n"}Monday: Read Isaiah 30:15-26 {"\n"}
           </Text>
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question7}</Text>
+        <Text style={{ fontWeight: "bold" }}>"What stood out to you in this portion of Scripture?"</Text>
           <Text>{this.props.answer7}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer7} onChangeText={text => {
             this.setState({ answer7: text });
@@ -233,7 +233,7 @@ class Devo extends React.Component {
           <View style={{ height: 20 }} />
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question8}</Text>
+        <Text style={{ fontWeight: "bold" }}>"What is the one reason somebody wouldn’t experience God’s compassion? Vs. 15 is key."</Text>
           <Text>{this.props.answer8}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer8} onChangeText={text => {
             this.setState({ answer8: text });
@@ -247,7 +247,7 @@ class Devo extends React.Component {
           <View style={{ height: 20 }} />
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question9}</Text>
+        <Text style={{ fontWeight: "bold" }}>"Vs. 22 talks about idols. Idols were images or statues people worshiped, believing that the idols would give them the desires of their hearts. We don’t have statues we worship per se, but we do have idols: things we give our time and energy believing they will satisfy us. What are some of the idols in our world and even in your own life?"</Text>
           <Text>{this.props.answer9}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer9} onChangeText={text => {
             this.setState({ answer9: text });
@@ -266,7 +266,7 @@ class Devo extends React.Component {
           </Text>
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question10}</Text>
+        <Text style={{ fontWeight: "bold" }}>"What stood out to you in this portion of Scripture?"</Text>
           <Text>{this.props.answer10}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer10} onChangeText={text => {
             this.setState({ answer10: text });
@@ -280,7 +280,7 @@ class Devo extends React.Component {
          <View style={{ height: 20 }} />
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question11}</Text>
+        <Text style={{ fontWeight: "bold" }}>"Why should we seek to be people of compassion?"</Text>
           <Text>{this.props.answer11}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer11} onChangeText={text => {
             this.setState({ answer11: text });
@@ -294,7 +294,7 @@ class Devo extends React.Component {
          <View style={{ height: 20 }} />
 
 
-          <Text style={{ fontWeight: "bold" }}>{this.props.personData.question12}</Text>
+        <Text style={{ fontWeight: "bold" }}>"What do you think it looks like for us to show compassion on people around us?"</Text>
           <Text>{this.props.answer12}</Text>
           <TextInput style={{ height: 100, borderColor: "black", borderWidth: 2, textAlign: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", flexWrap: "wrap" }} multiline={true} numberOfLines={4} value={this.state.answer12} onChangeText={text => {
             this.setState({ answer12: text });
