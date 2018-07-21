@@ -19,7 +19,8 @@
       "bundleIdentifier": "com.brentingram.rlayyouth"
     },
     "android": {
-      "package": "com.brentingram.rlayyouth"
+      "package": "com.brentingram.rlayyouth",
+      "versionCode": 2
     }
   }
 }
