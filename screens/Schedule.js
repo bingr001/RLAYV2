@@ -22,7 +22,7 @@ class Schedule extends React.Component {
         <Text>10:30 AM | Group Competitive Activity</Text>
         <Text>12 PM | Lunch</Text>
         <Text>1 PM | Group Competitive Activity</Text>
-        <Text>3 PM | Free Time</Text>
+        <Text>3 PM | Free Time/ Zip Line Available</Text>
         <Text>5 PM | Dinner</Text>
         <Text>6 PM | Group Competitive Activity</Text>
         <Text>7:30 PM | Worship and Sermon</Text>
@@ -74,7 +74,7 @@ class Schedule extends React.Component {
         <Text>10:30 AM | Group Competitive Activity</Text>
         <Text>12 PM | Lunch</Text>
         <Text>1 PM | Group Competitive Activity</Text>
-        <Text>3 PM | Free Time</Text>
+        <Text>3 PM | Free Time/Archery Available</Text>
         <Text>5 PM | Dinner</Text>
         <Text>6 PM | Group Competitive Activity</Text>
         <Text>7:30 PM | Worship Service</Text>
