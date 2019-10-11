@@ -7,6 +7,8 @@
 - Designed, implemented and developed this React-Native app was created for a summer camp for middle schoolers and high schoolers to use on iOS and Android.  Created the components and database from scratch
 - It uses Firebase for authentication and NoSQL and Redux for state management.
 
+-You can view my response to publishing this app here! https://www.youtube.com/watch?v=x9Eb_M9KsrI&feature=youtu.be
+
 
 
 
